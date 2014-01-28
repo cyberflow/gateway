@@ -3,6 +3,7 @@ use_inline_resources
 action :add do
   sysctl_param "net.ipv4.ip_forward" do
     value 1
+    action :save
   end
 
   modules "iptable_nat"
